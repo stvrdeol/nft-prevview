@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | NFT preview card component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: white;
+    }
+    html{
+      font-size: 62.5%;
+    }
+    *{
+      margin: 0px;
+      padding: 0px;
+    }
+    body{
+      font-family: outfit;
+      background-color: hsl(217, 54%, 11%);
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: hsl(215, 51%, 70%);
+    }
+    .main-container{
+      display: flex;
+      flex-direction: column;
+      width: 22rem;
+      background-color:hsl(216, 50%, 16%);
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow:  1rem 1rem 0.8rem hsl(215, 100%, 8%),-1rem 1rem 0.8rem hsl(215, 100%, 8%);
+    }
+    .nft-img{
+      width: 22rem;
+      border-radius: 0.5rem;
+    }
+    .nft-name{
+      color: white;
+      font-weight: 600;
+      font-size: 1.6rem;
+      margin: 1rem auto;
+    }
+    .nft-description{
+      font-size: 1.4rem;
+    }
+    .price-time-container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 5rem;
+      font-size: 1.2rem;
+    }
+    .price{
+      color: hsl(178, 100%, 50%);
+      display: flex;
+      align-items: center;
+    }
+    .time{
+      display: flex;
+      align-items: center;
+    }
+    .hr{
+      width: 22rem;
+      color: hsl(215, 51%, 70%);
+    }
+    .creator-info-container{
+      display: flex;
+      width: 22rem;
+      align-items: center;
+      padding-top: 1.5rem ;
+      border-top: 0.1rem solid hsl(215, 51%, 70%);
+    }
+    .artist-img{
+      width: 2.5rem;
+      padding-right: 1rem;
+    }
+    .artist-name{
+      font-size: 1.2rem;
+    }
+    svg{
+      padding-right: 0.5rem;
+    }
+    span{
+      color: white;
+    }
+    .img-container{
+      position: relative;
+      transition: all 0.15s;
+    }
+    .img-container:hover{
+      background-color: hsl(178, 100%, 50%);
+      z-index: 100;
+      cursor: pointer;
+      width: 22rem;
+      border-radius: 0.5rem;
+    }
+    .img-container:hover .nft-img{
+      opacity: 0.5;
+    }
+    .img-container:hover .view-img{
+      opacity: 1;
+    }
+    .view-img{
+      position: absolute;
+      width: 3rem;
+      top: 9.5rem;
+      left: 9.5rem;
+      opacity: 0;
+    }
+    .nft-name:hover, 
+    span:hover{
+      color: hsl(178, 100%, 50%);
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main"></div>
+  <div class="main-container">
+    <div class="img-container">
+      <img src="images/image-equilibrium.jpg" alt="nft-preview" class="nft-img">
+      <img src="images/icon-view.svg" alt="none" class="view-img">
+    </div>
+    <div class="nft-info-container">
+      <p class="nft-name">Equilibrium #3429</p>
+      <p class="nft-description">Our Equilibrium collection promotes balance and calm.</p>
+      <div class="price-time-container">
+        <p class="price"><svg width="11" height="18" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z"
+              fill="#00FFF8" />
+          </svg>0.041 ETH</p>
+        <p class="time"><svg width="17" height="17" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z"
+              fill="#8BACD9" />
+          </svg>3 days left</p>
+      </div>
+    </div>
+    <!-- <hr class="hr"> -->
+    <div class="creator-info-container">
+      <img src="images/image-avatar.png" alt="none" class="artist-img"> 
+      <p class="artist-name">Creation of <span>Jules Wyvern</span></p>  
+    </div>
+  </div>
+  <br><br><br><br><br>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Satvir Singh</a>.
+  </div>
+</body>
+
+</html>
